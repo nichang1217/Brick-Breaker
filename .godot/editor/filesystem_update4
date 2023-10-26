@@ -1,1 +1,9 @@
 res://Scenes/death_zone.tscn
+res://Scenes/main.tscn
+res://Scripts/ball.gd
+res://Scenes/ui.tscn
+res://Scripts/ui.gd
+res://Scenes/ball.tscn
+res://Scenes/paddle.tscn
+res://Scripts/paddle.gd
+res://Scenes/wall.tscn
