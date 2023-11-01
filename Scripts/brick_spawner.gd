@@ -9,7 +9,7 @@ const ROWS = 6
 @onready var ui = $"../UI" as UI
 
 @export var brick_scene: PackedScene
-@export var margin: Vector2 = Vector2(8,8)
+@export var margin: Vector2 = Vector2(100,30)
 @export var spawn_start: Marker2D
 
 var brick_count = 0
