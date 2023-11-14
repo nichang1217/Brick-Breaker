@@ -32,16 +32,21 @@ func _physics_process(delta):
 	var collider = collision.get_collider()
 	if collider is Brick:
 		collider.decrease_level()
+		$Brick.play()
+		
+	if collider is Paddle:
+		$HitPaddle.play()
 		
 	if (collider is Brick or collider is Paddle):
 		ball_collision(collider)
 	else:
 		velocity = velocity.bounce(collision.get_normal())
-	
+		$Wall.play()
 	
 func start_ball():
 	position = start_position
 	randomize()
+	$Background.play()
 	
 	velocity = Vector2(randf_range(-1, 1), randf_range(-.1, -1)).normalized() * ball_speed
 	
@@ -49,6 +54,8 @@ func on_life_lost():
 	lifes -= 1
 	if lifes == 0: 
 		ui.game_over()
+		$Background.stop()
+		$GameLost.play()
 	else:
 		life_lost.emit()
 		reset_ball()

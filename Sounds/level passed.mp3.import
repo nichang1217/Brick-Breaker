@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://bk662pqtfxym1"
+path="res://.godot/imported/level passed.mp3-e97bb5a03c6c17442f252ae50d3c4b30.mp3str"
+
+[deps]
+
+source_file="res://Sounds/level passed.mp3"
+dest_files=["res://.godot/imported/level passed.mp3-e97bb5a03c6c17442f252ae50d3c4b30.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4
