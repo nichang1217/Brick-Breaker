@@ -8,6 +8,7 @@ var level = 1
 
 @onready var sprite_2d = $Sprite2D
 @onready var collision_shape_2d = $CollisionShape2D
+@onready var brick_break = $BrickBreak
 
 var sprites: Array[Texture2D] = [
 	preload("res://Assets/Brick-Yellow.png"),
