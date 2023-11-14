@@ -10,6 +10,7 @@ radius = 32.249
 scale = Vector2(0.25, 0.25)
 motion_mode = 1
 script = ExtResource("1_u6jvb")
+lifes = 1
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 texture = ExtResource("1_cewcy")
