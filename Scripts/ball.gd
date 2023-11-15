@@ -16,7 +16,7 @@ var start_position: Vector2
 var last_collider_id
 
 @onready var collision_shape_2d = $CollisionShape2D
-
+@onready var hit_paddle = $HitPaddleParticles
 
 
 func _ready():
@@ -36,6 +36,7 @@ func _physics_process(delta):
 		
 	if collider is Paddle:
 		$HitPaddle.play()
+		hit_paddle.emitting = true
 		
 	if (collider is Brick or collider is Paddle):
 		ball_collision(collider)

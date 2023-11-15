@@ -30,9 +30,10 @@ func set_level(new_level: int):
 func decrease_level():
 	if level > 1:
 		set_level(level - 1)
+		brick_break.emitting = true
 	else:
 		fade_out()
-		
+		brick_break.emitting = true
 		
 func fade_out():
 	collision_shape_2d.disabled = true
