@@ -17,6 +17,7 @@ var last_collider_id
 
 @onready var collision_shape_2d = $CollisionShape2D
 @onready var hit_paddle = $HitPaddleParticles
+@onready var hit_wall = $HitWallParticles
 
 
 func _ready():
@@ -43,6 +44,7 @@ func _physics_process(delta):
 	else:
 		velocity = velocity.bounce(collision.get_normal())
 		$Wall.play()
+		hit_wall.emitting = true
 	
 func start_ball():
 	position = start_position

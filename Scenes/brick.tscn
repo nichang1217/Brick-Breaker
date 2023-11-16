@@ -1,4 +1,4 @@
-[gd_scene load_steps=5 format=3 uid="uid://bb46eppfe1uj6"]
+[gd_scene load_steps=10 format=3 uid="uid://bb46eppfe1uj6"]
 
 [ext_resource type="Texture2D" uid="uid://d06ws4g0pu0q0" path="res://Assets/Brick-Blue.png" id="1_ehr5w"]
 [ext_resource type="Script" path="res://Scripts/brick.gd" id="1_le304"]
@@ -20,6 +20,87 @@ orbit_velocity_min = 0.0
 orbit_velocity_max = 0.0
 scale_min = 5.0
 scale_max = 10.0
+color = Color(0.91, 0.7735, 0.364, 1)
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_tvy4q"]
+lifetime_randomness = 1.0
+emission_shape = 3
+emission_box_extents = Vector3(40, 10, 5)
+particle_flag_disable_z = true
+spread = 180.0
+flatness = 1.0
+gravity = Vector3(0, 98, 0)
+initial_velocity_min = 30.0
+initial_velocity_max = 50.0
+orbit_velocity_min = 0.0
+orbit_velocity_max = 0.0
+scale_min = 5.0
+scale_max = 10.0
+color = Color(0.4, 0.71, 1, 1)
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_3xxqr"]
+lifetime_randomness = 1.0
+emission_shape = 3
+emission_box_extents = Vector3(40, 10, 5)
+particle_flag_disable_z = true
+spread = 180.0
+flatness = 1.0
+gravity = Vector3(0, 98, 0)
+initial_velocity_min = 30.0
+initial_velocity_max = 50.0
+orbit_velocity_min = 0.0
+orbit_velocity_max = 0.0
+scale_min = 5.0
+scale_max = 10.0
+color = Color(0.95, 0.627, 0.38, 1)
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_bgato"]
+lifetime_randomness = 1.0
+emission_shape = 3
+emission_box_extents = Vector3(40, 10, 5)
+particle_flag_disable_z = true
+spread = 180.0
+flatness = 1.0
+gravity = Vector3(0, 98, 0)
+initial_velocity_min = 30.0
+initial_velocity_max = 50.0
+orbit_velocity_min = 0.0
+orbit_velocity_max = 0.0
+scale_min = 5.0
+scale_max = 10.0
+color = Color(0.4235, 0.77, 0.3542, 1)
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_ahb6k"]
+lifetime_randomness = 1.0
+emission_shape = 3
+emission_box_extents = Vector3(40, 10, 5)
+particle_flag_disable_z = true
+spread = 180.0
+flatness = 1.0
+gravity = Vector3(0, 98, 0)
+initial_velocity_min = 30.0
+initial_velocity_max = 50.0
+orbit_velocity_min = 0.0
+orbit_velocity_max = 0.0
+scale_min = 5.0
+scale_max = 10.0
+color = Color(0.521569, 0.521569, 0.521569, 1)
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_2a23t"]
+lifetime_randomness = 1.0
+emission_shape = 3
+emission_box_extents = Vector3(40, 10, 5)
+particle_flag_disable_z = true
+spread = 180.0
+flatness = 1.0
+gravity = Vector3(0, 98, 0)
+initial_velocity_min = 30.0
+initial_velocity_max = 50.0
+orbit_velocity_min = 0.0
+orbit_velocity_max = 0.0
+scale_min = 5.0
+scale_max = 10.0
+color = Color(0.77, 0.3542, 0.38885, 1)
 
 [node name="Brick" type="RigidBody2D"]
 collision_layer = 8
@@ -40,6 +121,46 @@ shape = SubResource("RectangleShape2D_itq6o")
 emitting = false
 amount = 20
 process_material = SubResource("ParticleProcessMaterial_xx0l8")
+one_shot = true
+randomness = 1.0
+local_coords = true
+
+[node name="BrickBreak2" type="GPUParticles2D" parent="."]
+emitting = false
+amount = 20
+process_material = SubResource("ParticleProcessMaterial_tvy4q")
+one_shot = true
+randomness = 1.0
+local_coords = true
+
+[node name="BrickBreak3" type="GPUParticles2D" parent="."]
+emitting = false
+amount = 20
+process_material = SubResource("ParticleProcessMaterial_3xxqr")
+one_shot = true
+randomness = 1.0
+local_coords = true
+
+[node name="BrickBreak4" type="GPUParticles2D" parent="."]
+emitting = false
+amount = 20
+process_material = SubResource("ParticleProcessMaterial_bgato")
+one_shot = true
+randomness = 1.0
+local_coords = true
+
+[node name="BrickBreak5" type="GPUParticles2D" parent="."]
+emitting = false
+amount = 20
+process_material = SubResource("ParticleProcessMaterial_ahb6k")
+one_shot = true
+randomness = 1.0
+local_coords = true
+
+[node name="BrickBreak6" type="GPUParticles2D" parent="."]
+emitting = false
+amount = 20
+process_material = SubResource("ParticleProcessMaterial_2a23t")
 one_shot = true
 randomness = 1.0
 local_coords = true
