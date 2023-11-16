@@ -17,7 +17,7 @@ func _on_game_lost_button_pressed():
 	get_tree().reload_current_scene()
 
 func on_level_won():
-	if LevelDefinitions.current_level == 2:
+	if LevelDefinitions.current_level == 3:
 		game_won_container.show()
 		$GameWon.play()
 	else:
@@ -25,5 +25,9 @@ func on_level_won():
 		$LevelPassed.play()
 
 func _on_level_won_button_pressed():
-	LevelDefinitions.current_level = 2
-	get_tree().reload_current_scene()
+	if LevelDefinitions.current_level == 1:
+		LevelDefinitions.current_level = 2
+		get_tree().reload_current_scene()
+	else: 
+		LevelDefinitions.current_level = 3
+		get_tree().reload_current_scene()
