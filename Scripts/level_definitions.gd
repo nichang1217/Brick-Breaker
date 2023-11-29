@@ -23,5 +23,9 @@ var level_3 = [
 var levels = [level_1, level_2, level_3]
 
 func get_current_level():
-	print(levels[current_level - 1])
-	return levels[current_level - 1]
+	if current_level == 3:
+		print(levels[current_level - 1])
+		return levels[current_level - 1]
+	else:
+		print(levels[current_level - 1])
+		return levels[current_level - 1]

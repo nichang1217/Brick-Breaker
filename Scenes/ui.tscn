@@ -128,5 +128,11 @@ text = "YOU HAVE WON THE GAME"
 horizontal_alignment = 1
 vertical_alignment = 1
 
+[node name="RestartGameButton" type="Button" parent="GameWonContainer/Panel/VBoxContainer"]
+layout_mode = 2
+text = "RESTART GAME
+"
+
 [connection signal="pressed" from="GameLostContainer/Panel/VBoxContainer/GameLostButton" to="." method="_on_game_lost_button_pressed"]
 [connection signal="pressed" from="LevelWonContainer/Panel/VBoxContainer/LevelWonButton" to="." method="_on_level_won_button_pressed"]
+[connection signal="pressed" from="GameWonContainer/Panel/VBoxContainer/RestartGameButton" to="." method="_on_restart_game_button_pressed"]

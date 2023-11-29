@@ -31,3 +31,8 @@ func _on_level_won_button_pressed():
 	else: 
 		LevelDefinitions.current_level = 3
 		get_tree().reload_current_scene()
+
+
+func _on_restart_game_button_pressed():
+	LevelDefinitions.current_level = 1
+	get_tree().reload_current_scene()
